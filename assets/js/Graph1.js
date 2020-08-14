@@ -1,11 +1,11 @@
 (() => {
 
     const table1 = document.getElementById("table1");
-    let data = [];
-    let chart = null;
-
+    
     function loadData1(ctx) {
         const labels = [];
+        let data = [];
+        let chart = null;
         const randomColor = () => Math.floor(Math.random() * 256);  
         
         for (let i = 1; i < table1.rows.length; i++) {
@@ -38,14 +38,7 @@
             options: {
               maintainAspectRatio: false,
               responsive: false,
-              scales: {
-                xAxes: [{
-                    stacked: true
-                }],
-                yAxes: [{
-                    stacked: false
-                }]
-            }
+            
             }
         });
     }
@@ -58,38 +51,5 @@
         loadData1(ctx);
     }
     graph1();
-    
-    
-
-
-
-
-     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 })()
